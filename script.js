@@ -122,3 +122,4 @@ function displayError(message) {
 
 // Initialize the game when the window loads
 window.onload = loadGameData;
+
