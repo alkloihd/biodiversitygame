@@ -1,0 +1,867 @@
+{
+    "nodes": [
+        {
+            "node_id": "N1",
+            "scenario": "Silverwood Forest is suffering from deforestation and pollution. As Dr. Alex Rivers, you have been tasked with restoring balance to the forest. Where will you focus your efforts first?",
+            "choices": [
+                {
+                    "choice_id": "C1A",
+                    "description": "Replant trees to restore vegetation",
+                    "next_id": "N2A"
+                },
+                {
+                    "choice_id": "C1B",
+                    "description": "Protect wildlife to ensure ecosystem balance",
+                    "next_id": "N2B"
+                },
+                {
+                    "choice_id": "C1C",
+                    "description": "Implement pollution control measures",
+                    "next_id": "N2C"
+                }
+            ]
+        },
+        {
+            "node_id": "N2A",
+            "scenario": "You decide to replant trees. Which species will you plant?",
+            "choices": [
+                {
+                    "choice_id": "C2A1",
+                    "description": "Fast-growing non-native species that provide quick results",
+                    "next_id": "N3A1",
+                    "state_updates": {
+                        "PlantedNonNative": true
+                    }
+                },
+                {
+                    "choice_id": "C2A2",
+                    "description": "Native species that are slower but support the local ecosystem",
+                    "next_id": "N3A2",
+                    "state_updates": {
+                        "PlantedNative": true
+                    }
+                },
+                {
+                    "choice_id": "C2A3",
+                    "description": "Hybrid species combining native and non-native traits",
+                    "next_id": "N3A3",
+                    "state_updates": {
+                        "PlantedHybrid": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N2B",
+            "scenario": "You decide to protect wildlife. What approach will you take?",
+            "choices": [
+                {
+                    "choice_id": "C2B1",
+                    "description": "Create wildlife corridors to connect fragmented habitats",
+                    "next_id": "N3B1",
+                    "state_updates": {
+                        "CreatedCorridors": true
+                    }
+                },
+                {
+                    "choice_id": "C2B2",
+                    "description": "Reintroduce native species to restore ecosystem health",
+                    "next_id": "N3B2",
+                    "state_updates": {
+                        "ReintroducedNative": true
+                    }
+                },
+                {
+                    "choice_id": "C2B3",
+                    "description": "Establish wildlife sanctuaries with strict protection",
+                    "next_id": "N3B3",
+                    "state_updates": {
+                        "EstablishedSanctuaries": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N2C",
+            "scenario": "You decide to implement pollution control measures. What actions will you prioritize?",
+            "choices": [
+                {
+                    "choice_id": "C2C1",
+                    "description": "Install advanced filtration systems in nearby factories",
+                    "next_id": "N3C1",
+                    "state_updates": {
+                        "InstalledFiltration": true
+                    }
+                },
+                {
+                    "choice_id": "C2C2",
+                    "description": "Launch community awareness campaigns on pollution reduction",
+                    "next_id": "N3C2",
+                    "state_updates": {
+                        "LaunchedAwareness": true
+                    }
+                },
+                {
+                    "choice_id": "C2C3",
+                    "description": "Enforce stricter regulations on waste disposal",
+                    "next_id": "N3C3",
+                    "state_updates": {
+                        "EnforcedRegulations": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N3A1",
+            "scenario": "The non-native trees grow quickly but outcompete local species. What will you do next?",
+            "choices": [
+                {
+                    "choice_id": "C3A1a",
+                    "description": "Continue planting non-native trees for faster coverage",
+                    "next_id": "N4A1a",
+                    "state_updates": {
+                        "ContinuedNonNative": true
+                    }
+                },
+                {
+                    "choice_id": "C3A1b",
+                    "description": "Switch to native species to preserve biodiversity",
+                    "next_id": "N4A1b",
+                    "state_updates": {
+                        "SwitchedToNative": true
+                    }
+                },
+                {
+                    "choice_id": "C3A1c",
+                    "description": "Remove some non-native trees to balance growth",
+                    "next_id": "N4A1c",
+                    "state_updates": {
+                        "RemovedNonNative": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N3A2",
+            "scenario": "The native trees grow slowly but benefit the ecosystem long-term. How will you ensure their survival?",
+            "choices": [
+                {
+                    "choice_id": "C3A2a",
+                    "description": "Implement a watering system to help them grow",
+                    "next_id": "N4A2a",
+                    "state_updates": {
+                        "InstalledWatering": true
+                    }
+                },
+                {
+                    "choice_id": "C3A2b",
+                    "description": "Engage the local community to support tree-planting efforts",
+                    "next_id": "N4A2b",
+                    "state_updates": {
+                        "EngagedCommunity": true
+                    }
+                },
+                {
+                    "choice_id": "C3A2c",
+                    "description": "Introduce natural fertilizers to accelerate growth",
+                    "next_id": "N4A2c",
+                    "state_updates": {
+                        "IntroducedFertilizers": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N3A3",
+            "scenario": "Hybrid species offer a balance between growth speed and ecosystem support. What will you focus on next?",
+            "choices": [
+                {
+                    "choice_id": "C3A3a",
+                    "description": "Monitor hybrid trees for ecological impact",
+                    "next_id": "N4A3a",
+                    "state_updates": {
+                        "MonitoredHybrids": true
+                    }
+                },
+                {
+                    "choice_id": "C3A3b",
+                    "description": "Expand hybrid tree plantations",
+                    "next_id": "N4A3b",
+                    "state_updates": {
+                        "ExpandedHybrids": true
+                    }
+                },
+                {
+                    "choice_id": "C3A3c",
+                    "description": "Combine hybrid planting with native species",
+                    "next_id": "N4A3c",
+                    "state_updates": {
+                        "CombinedPlanting": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N3B1",
+            "scenario": "Wildlife corridors are reconnecting habitats. How will you maintain these efforts?",
+            "choices": [
+                {
+                    "choice_id": "C3B1a",
+                    "description": "Apply for government funding for monitoring",
+                    "next_id": "N4B1a",
+                    "state_updates": {
+                        "AppliedForFunding": true
+                    }
+                },
+                {
+                    "choice_id": "C3B1b",
+                    "description": "Involve the local community for long-term maintenance",
+                    "next_id": "N4B1b",
+                    "state_updates": {
+                        "EngagedCommunity": true
+                    }
+                },
+                {
+                    "choice_id": "C3B1c",
+                    "description": "Partner with environmental NGOs for support",
+                    "next_id": "N4B1c",
+                    "state_updates": {
+                        "PartneredNGOs": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N3B2",
+            "scenario": "Reintroducing native species helps, but challenges remain. How will you proceed?",
+            "choices": [
+                {
+                    "choice_id": "C3B2a",
+                    "description": "Reintroduce predators to control overgrazing herbivores",
+                    "next_id": "N4B2a",
+                    "state_updates": {
+                        "ReintroducedPredators": true
+                    }
+                },
+                {
+                    "choice_id": "C3B2b",
+                    "description": "Focus on pollinators to boost plant reproduction",
+                    "next_id": "N4B2b",
+                    "state_updates": {
+                        "FocusedOnPollinators": true
+                    }
+                },
+                {
+                    "choice_id": "C3B2c",
+                    "description": "Implement rotational grazing to balance herbivore populations",
+                    "next_id": "N4B2c",
+                    "state_updates": {
+                        "ImplementedRotationalGrazing": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N3B3",
+            "scenario": "Establishing wildlife sanctuaries provides safe havens. What additional measures will you take?",
+            "choices": [
+                {
+                    "choice_id": "C3B3a",
+                    "description": "Implement strict anti-poaching laws",
+                    "next_id": "N4B3a",
+                    "state_updates": {
+                        "ImplementedAntiPoaching": true
+                    }
+                },
+                {
+                    "choice_id": "C3B3b",
+                    "description": "Provide educational programs for visitors",
+                    "next_id": "N4B3b",
+                    "state_updates": {
+                        "ProvidedEducationalPrograms": true
+                    }
+                },
+                {
+                    "choice_id": "C3B3c",
+                    "description": "Collaborate with research institutions for wildlife studies",
+                    "next_id": "N4B3c",
+                    "state_updates": {
+                        "CollaboratedResearch": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N3C1",
+            "scenario": "Advanced filtration systems are installed in factories. How will you ensure their effectiveness?",
+            "choices": [
+                {
+                    "choice_id": "C3C1a",
+                    "description": "Regularly monitor and maintain filtration equipment",
+                    "next_id": "N4C1a",
+                    "state_updates": {
+                        "RegularMonitoring": true
+                    }
+                },
+                {
+                    "choice_id": "C3C1b",
+                    "description": "Train factory workers on proper usage and maintenance",
+                    "next_id": "N4C1b",
+                    "state_updates": {
+                        "TrainedWorkers": true
+                    }
+                },
+                {
+                    "choice_id": "C3C1c",
+                    "description": "Upgrade filtration technology annually",
+                    "next_id": "N4C1c",
+                    "state_updates": {
+                        "UpgradedTechnology": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N3C2",
+            "scenario": "Community awareness campaigns are underway. How will you sustain engagement?",
+            "choices": [
+                {
+                    "choice_id": "C3C2a",
+                    "description": "Organize regular workshops and seminars",
+                    "next_id": "N4C2a",
+                    "state_updates": {
+                        "OrganizedWorkshops": true
+                    }
+                },
+                {
+                    "choice_id": "C3C2b",
+                    "description": "Create informative online content and social media presence",
+                    "next_id": "N4C2b",
+                    "state_updates": {
+                        "CreatedOnlineContent": true
+                    }
+                },
+                {
+                    "choice_id": "C3C2c",
+                    "description": "Partner with local schools for educational programs",
+                    "next_id": "N4C2c",
+                    "state_updates": {
+                        "PartneredWithSchools": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N3C3",
+            "scenario": "Stricter waste disposal regulations are enforced. How will you ensure compliance?",
+            "choices": [
+                {
+                    "choice_id": "C3C3a",
+                    "description": "Conduct regular inspections and audits",
+                    "next_id": "N4C3a",
+                    "state_updates": {
+                        "ConductedInspections": true
+                    }
+                },
+                {
+                    "choice_id": "C3C3b",
+                    "description": "Implement penalties for non-compliance",
+                    "next_id": "N4C3b",
+                    "state_updates": {
+                        "ImplementedPenalties": true
+                    }
+                },
+                {
+                    "choice_id": "C3C3c",
+                    "description": "Provide incentives for compliant businesses",
+                    "next_id": "N4C3c",
+                    "state_updates": {
+                        "ProvidedIncentives": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N4A1a",
+            "outcome": "By continuing to plant non-native trees, the forest's coverage expanded rapidly. However, this led to a significant decline in native plant species, reducing biodiversity. The ecosystem became fragile, making it susceptible to diseases and pests. The lack of diverse flora disrupted food chains, affecting various animal populations. Ultimately, the forest's long-term sustainability was compromised. **Success Score: 40%**"
+        },
+        {
+            "node_id": "N4A1b",
+            "scenario": "Switching to native species restores balance but progress is slow due to invasive species.",
+            "choices": [
+                {
+                    "choice_id": "C4A1b1",
+                    "description": "Introduce natural predators to control invasives",
+                    "next_id": "N5A1b1",
+                    "state_updates": {
+                        "IntroducedPredators": true
+                    }
+                },
+                {
+                    "choice_id": "C4A1b2",
+                    "description": "Increase community efforts to remove invasives",
+                    "next_id": "N5A1b2",
+                    "state_updates": {
+                        "IncreasedCommunityInvolvement": true
+                    }
+                },
+                {
+                    "choice_id": "C4A1b3",
+                    "description": "Use biological control agents to manage invasive species",
+                    "next_id": "N5A1b3",
+                    "state_updates": {
+                        "UsedBiologicalControl": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N4A1c",
+            "outcome": "Removing some non-native trees helped reduce their dominance, allowing native species to regain foothold. While biodiversity improved, the rapid removal caused soil erosion and temporary loss of habitat for certain wildlife. The forest gradually stabilized, balancing coverage with native flora. **Success Score: 60%**"
+        },
+        {
+            "node_id": "N4A2a",
+            "scenario": "The watering system supports tree growth but needs maintenance. Volunteers are scarce.",
+            "choices": [
+                {
+                    "choice_id": "C4A2a1",
+                    "description": "Seek government grants for maintenance",
+                    "next_id": "N5A2a1",
+                    "state_updates": {
+                        "FundedMaintenance": true
+                    }
+                },
+                {
+                    "choice_id": "C4A2a2",
+                    "description": "Engage local schools for student involvement",
+                    "next_id": "N5A2a2",
+                    "state_updates": {
+                        "SchoolEngagement": true
+                    }
+                },
+                {
+                    "choice_id": "C4A2a3",
+                    "description": "Automate the watering system with smart technology",
+                    "next_id": "N5A2a3",
+                    "state_updates": {
+                        "AutomatedWatering": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N4A2b",
+            "scenario": "Community engagement is high, but managing volunteers is challenging.",
+            "choices": [
+                {
+                    "choice_id": "C4A2b1",
+                    "description": "Create a structured volunteer program",
+                    "next_id": "N5A2b1",
+                    "state_updates": {
+                        "StructuredProgram": true
+                    }
+                },
+                {
+                    "choice_id": "C4A2b2",
+                    "description": "Limit volunteer numbers for manageability",
+                    "next_id": "N5A2b2",
+                    "state_updates": {
+                        "ReducedVolunteerNumbers": true
+                    }
+                },
+                {
+                    "choice_id": "C4A2b3",
+                    "description": "Train volunteer leaders for efficient management",
+                    "next_id": "N5A2b3",
+                    "state_updates": {
+                        "TrainedVolunteerLeaders": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N4A2c",
+            "outcome": "Introducing natural fertilizers accelerated native tree growth, enhancing soil quality and ecosystem resilience. However, overuse led to nutrient runoff, affecting nearby water bodies. Careful management ensured sustained benefits without adverse environmental impacts. **Success Score: 75%**"
+        },
+        {
+            "node_id": "N4A3a",
+            "outcome": "Monitoring hybrid trees revealed that they thrived without significantly impacting native species. This balance contributed to a resilient forest structure, supporting diverse wildlife and robust plant communities. Ongoing observations ensured long-term sustainability. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N4A3b",
+            "outcome": "Expanding hybrid tree plantations accelerated forest coverage while maintaining ecological balance. The integrated approach supported both rapid restoration and biodiversity preservation, leading to a thriving and resilient Silverwood Forest. **Success Score: 90%**"
+        },
+        {
+            "node_id": "N4A3c",
+            "outcome": "Combining hybrid planting with native species created a harmonious ecosystem. The hybrids provided quick coverage, while native trees ensured biodiversity. This strategy promoted a sustainable and balanced forest environment, benefiting all flora and fauna. **Success Score: 95%**"
+        },
+        {
+            "node_id": "N4B1a",
+            "scenario": "Government funding helps but bureaucratic delays hinder progress.",
+            "choices": [
+                {
+                    "choice_id": "C4B1a1",
+                    "description": "Lobby for faster approvals",
+                    "next_id": "N5B1a1",
+                    "state_updates": {
+                        "ApprovedQuickly": true
+                    }
+                },
+                {
+                    "choice_id": "C4B1a2",
+                    "description": "Seek private partnerships for funding",
+                    "next_id": "N5B1a2",
+                    "state_updates": {
+                        "PrivatePartnerships": true
+                    }
+                },
+                {
+                    "choice_id": "C4B1a3",
+                    "description": "Implement a tracking system to monitor progress",
+                    "next_id": "N5B1a3",
+                    "state_updates": {
+                        "ImplementedTracking": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N4B1b",
+            "scenario": "Community involvement is strong but long-term interest is uncertain.",
+            "choices": [
+                {
+                    "choice_id": "C4B1b1",
+                    "description": "Develop a long-term engagement plan",
+                    "next_id": "N5B1b1",
+                    "state_updates": {
+                        "LongTermPlan": true
+                    }
+                },
+                {
+                    "choice_id": "C4B1b2",
+                    "description": "Focus on short-term projects to keep interest",
+                    "next_id": "N5B1b2",
+                    "state_updates": {
+                        "ShortTermFocus": true
+                    }
+                },
+                {
+                    "choice_id": "C4B1b3",
+                    "description": "Introduce incentive programs for sustained participation",
+                    "next_id": "N5B1b3",
+                    "state_updates": {
+                        "IntroducedIncentives": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N4B1c",
+            "outcome": "Partnering with environmental NGOs provided additional resources and expertise. This collaboration enhanced the effectiveness of wildlife corridor maintenance, leading to healthier and more connected habitats across Silverwood Forest. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N4B2a",
+            "scenario": "Reintroducing predators controls herbivores but worries farmers about livestock.",
+            "choices": [
+                {
+                    "choice_id": "C4B2a1",
+                    "description": "Work with farmers on predator deterrents",
+                    "next_id": "N5B2a1",
+                    "state_updates": {
+                        "DeterrentSystems": true
+                    }
+                },
+                {
+                    "choice_id": "C4B2a2",
+                    "description": "Reconsider predator reintroduction",
+                    "next_id": "N5B2a2",
+                    "state_updates": {
+                        "ReconsideredPredators": true
+                    }
+                },
+                {
+                    "choice_id": "C4B2a3",
+                    "description": "Implement compensation schemes for affected farmers",
+                    "next_id": "N5B2a3",
+                    "state_updates": {
+                        "CompensationSchemes": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N4B2b",
+            "scenario": "Focusing on pollinators boosts plants but invasives persist.",
+            "choices": [
+                {
+                    "choice_id": "C4B2b1",
+                    "description": "Manually remove invasive species",
+                    "next_id": "N5B2b1",
+                    "state_updates": {
+                        "ManualRemoval": true
+                    }
+                },
+                {
+                    "choice_id": "C4B2b2",
+                    "description": "Introduce predators to control invasives",
+                    "next_id": "N5B2b2",
+                    "state_updates": {
+                        "IntroducedPredatorsForInvasives": true
+                    }
+                },
+                {
+                    "choice_id": "C4B2b3",
+                    "description": "Use biological control agents against invasives",
+                    "next_id": "N5B2b3",
+                    "state_updates": {
+                        "UsedBiologicalControlAgents": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N4B2c",
+            "outcome": "Implementing rotational grazing helped balance herbivore populations without the need for predator reintroduction. This method maintained plant diversity and prevented overgrazing, contributing to a stable and thriving ecosystem. **Success Score: 70%**"
+        },
+        {
+            "node_id": "N4B3a",
+            "outcome": "Strict anti-poaching laws deterred illegal hunting, ensuring wildlife sanctuaries remained safe havens. This protection allowed animal populations to flourish, restoring ecological balance and enhancing biodiversity within Silverwood Forest. **Success Score: 90%**"
+        },
+        {
+            "node_id": "N4B3b",
+            "outcome": "Educational programs increased public awareness about wildlife conservation. Visitors became more engaged and supportive, fostering a community that values and actively participates in protecting the forest's wildlife. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N4B3c",
+            "outcome": "Collaborating with research institutions provided valuable insights into wildlife behavior and ecosystem dynamics. This partnership led to more effective conservation strategies, ensuring the long-term success of wildlife sanctuaries. **Success Score: 88%**"
+        },
+        {
+            "node_id": "N4C1a",
+            "outcome": "Regular monitoring and maintenance ensured that filtration systems operated efficiently, significantly reducing industrial pollution levels. This clean-up effort led to healthier waterways and improved overall forest health. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N4C1b",
+            "outcome": "Training factory workers on proper usage and maintenance of filtration systems ensured their longevity and effectiveness. This proactive approach maintained low pollution levels, fostering a cleaner and more sustainable environment. **Success Score: 75%**"
+        },
+        {
+            "node_id": "N4C1c",
+            "outcome": "Upgrading filtration technology annually kept pollution control measures state-of-the-art. Continuous improvements led to a substantial decrease in harmful emissions, contributing to the forest's restoration and resilience. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N4C2a",
+            "outcome": "Organizing regular workshops and seminars kept the community informed and engaged in pollution reduction efforts. Continuous education fostered a culture of environmental stewardship, leading to sustained positive impacts on the forest. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N4C2b",
+            "outcome": "Creating informative online content and a strong social media presence expanded the reach of awareness campaigns. This widespread dissemination of information resulted in increased public participation and support for pollution control initiatives. **Success Score: 82%**"
+        },
+        {
+            "node_id": "N4C2c",
+            "outcome": "Partnering with local schools integrated pollution awareness into the educational curriculum. Students became active participants in conservation efforts, ensuring the longevity of community engagement and environmental consciousness. **Success Score: 78%**"
+        },
+        {
+            "node_id": "N4C3a",
+            "outcome": "Conducting regular inspections and audits maintained high compliance levels with waste disposal regulations. This rigorous enforcement prevented illegal dumping, preserving the forest's integrity and natural beauty. **Success Score: 83%**"
+        },
+        {
+            "node_id": "N4C3b",
+            "outcome": "Implementing penalties for non-compliance deterred improper waste disposal practices. The fear of consequences ensured that businesses adhered to regulations, maintaining a clean and healthy forest environment. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N4C3c",
+            "outcome": "Providing incentives for compliant businesses encouraged proactive environmental practices. This positive reinforcement fostered a collaborative effort between authorities and industries, enhancing the effectiveness of pollution control measures. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N5A1b1",
+            "outcome": "Introducing natural predators helped control invasive species without disrupting the native ecosystem. This balanced approach improved biodiversity and ecosystem resilience, ensuring the long-term sustainability of Silverwood Forest. **Success Score: 88%**"
+        },
+        {
+            "node_id": "N5A1b2",
+            "outcome": "Increasing community involvement in removing invasive species led to significant reductions in their populations. The collective effort fostered a strong sense of ownership and responsibility, enhancing the forest's restoration process. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N5A1b3",
+            "outcome": "Using biological control agents proved effective in managing invasive species. This method maintained ecological balance and reduced the manual workload, allowing native species to flourish and restoring forest health. **Success Score: 90%**"
+        },
+        {
+            "node_id": "N5A2a1",
+            "scenario": "Government grants fund maintenance but long-term funding is uncertain.",
+            "choices": [
+                {
+                    "choice_id": "C5A2a1a",
+                    "description": "Apply for additional support",
+                    "next_id": "N6A2a1a",
+                    "state_updates": {
+                        "AppliedForGrants": true
+                    }
+                },
+                {
+                    "choice_id": "C5A2a1b",
+                    "description": "Seek corporate sponsors",
+                    "next_id": "N6A2a1b",
+                    "state_updates": {
+                        "CorporateSponsorship": true
+                    }
+                },
+                {
+                    "choice_id": "C5A2a1c",
+                    "description": "Launch a crowdfunding campaign",
+                    "next_id": "N6A2a1c",
+                    "state_updates": {
+                        "LaunchedCrowdfunding": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N5A2a2",
+            "scenario": "School involvement provides volunteers but sustainability depends on interest.",
+            "choices": [
+                {
+                    "choice_id": "C5A2a2a",
+                    "description": "Develop educational programs",
+                    "next_id": "N6A2a2a",
+                    "state_updates": {
+                        "EducationProgram": true
+                    }
+                },
+                {
+                    "choice_id": "C5A2a2b",
+                    "description": "Focus on short-term projects",
+                    "next_id": "N6A2a2b",
+                    "state_updates": {
+                        "ShortTermProjects": true
+                    }
+                },
+                {
+                    "choice_id": "C5A2a2c",
+                    "description": "Integrate conservation into school curricula",
+                    "next_id": "N6A2a2c",
+                    "state_updates": {
+                        "IntegratedCurricula": true
+                    }
+                }
+            ]
+        },
+        {
+            "node_id": "N5A2a3",
+            "outcome": "Automating the watering system with smart technology ensured consistent maintenance with minimal human intervention. This innovation maintained healthy tree growth and reduced the dependency on scarce volunteers. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N5A2b1",
+            "outcome": "Creating a structured volunteer program streamlined volunteer activities, improving efficiency and reducing management challenges. This organization led to more effective maintenance of the watering system, enhancing tree health and ecosystem resilience. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N5A2b2",
+            "outcome": "Limiting volunteer numbers made management easier but reduced overall manpower. While the watering system was maintained, the reduced volunteer base slowed down additional restoration projects. **Success Score: 65%**"
+        },
+        {
+            "node_id": "N5A2b3",
+            "outcome": "Training volunteer leaders for efficient management empowered a few individuals to oversee larger groups. This approach maintained volunteer enthusiasm and ensured consistent maintenance of the watering system, supporting robust tree growth. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N5A2c",
+            "outcome": "Implementing rotational grazing in adjacent areas prevented overgrazing, allowing vegetation to recover. This sustainable practice maintained plant diversity and supported a balanced herbivore population, contributing to a healthy ecosystem. **Success Score: 75%**"
+        },
+        {
+            "node_id": "N5B1a1",
+            "outcome": "Lobbying for faster approvals streamlined project timelines, allowing quicker implementation of wildlife corridors. This efficiency accelerated habitat restoration, enhancing connectivity and biodiversity in Silverwood Forest. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N5B1a2",
+            "outcome": "Seeking private partnerships secured additional funding and resources for wildlife corridor maintenance. This collaboration enhanced the scope and effectiveness of restoration efforts, leading to a more resilient and connected ecosystem. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N5B1a3",
+            "outcome": "Implementing a tracking system provided real-time data on corridor effectiveness, enabling timely interventions. This monitoring improved management decisions, ensuring the corridors met their ecological goals efficiently. **Success Score: 82%**"
+        },
+        {
+            "node_id": "N5B1b1",
+            "outcome": "Developing a long-term engagement plan sustained community involvement, ensuring ongoing support for wildlife corridor maintenance. This sustained effort led to consistent habitat restoration and enhanced ecosystem health. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N5B1b2",
+            "outcome": "Focusing on short-term projects maintained immediate interest and achieved quick restoration milestones. However, the lack of long-term planning left the forest vulnerable to future challenges without continued volunteer support. **Success Score: 65%**"
+        },
+        {
+            "node_id": "N5B1b3",
+            "outcome": "Introducing incentive programs for sustained participation encouraged ongoing community engagement. Volunteers remained motivated, ensuring continuous maintenance of wildlife corridors and enhancing habitat connectivity. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N5B1c",
+            "outcome": "Partnering with environmental NGOs provided specialized expertise and resources for corridor management. This collaboration resulted in more effective restoration strategies and improved ecosystem outcomes. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N5B2a1",
+            "outcome": "Implementing predator deterrent systems alleviated farmers' concerns about livestock losses. This balanced approach allowed predators to control herbivore populations without endangering livestock, maintaining harmony between agriculture and wildlife conservation. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N5B2a2",
+            "outcome": "Reconsidering predator reintroduction led to unmanaged herbivore populations, causing overgrazing and habitat degradation. This imbalance threatened the forest's sustainability, necessitating urgent corrective actions. **Success Score: 50%**"
+        },
+        {
+            "node_id": "N5B2a3",
+            "outcome": "Implementing compensation schemes for affected farmers mitigated their concerns, encouraging cooperation. This approach allowed predator reintroduction to proceed smoothly, effectively controlling herbivore populations and restoring ecosystem balance. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N5B2b1",
+            "outcome": "Manually removing invasive species effectively reduced their numbers, allowing native plants to flourish. This hands-on approach restored ecological balance, promoting a diverse and resilient forest ecosystem. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N5B2b2",
+            "outcome": "Introducing predators to control invasive species successfully managed their populations, restoring native biodiversity. This biological control method maintained ecosystem balance, supporting diverse flora and fauna. **Success Score: 90%**"
+        },
+        {
+            "node_id": "N5B2b3",
+            "outcome": "Using biological control agents provided a sustainable solution to invasive species management. This method maintained ecological balance without extensive manual intervention, ensuring long-term forest health. **Success Score: 92%**"
+        },
+        {
+            "node_id": "N5A2a1a",
+            "outcome": "Applying for additional government support secured long-term funding for the watering system. This financial stability ensured uninterrupted maintenance, fostering robust tree growth and ecosystem resilience. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N5A2a1b",
+            "outcome": "Corporate sponsorship provided immediate funds but introduced external influences. While the watering system was maintained, balancing corporate interests with ecological goals became a challenge. **Success Score: 70%**"
+        },
+        {
+            "node_id": "N5A2a1c",
+            "outcome": "Launching a crowdfunding campaign successfully raised funds from the community, ensuring the watering system's sustainability. This collective effort strengthened community bonds and commitment to forest restoration. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N5A2a2a",
+            "outcome": "Developing educational programs enhanced volunteer skills and environmental awareness. These programs empowered volunteers to contribute more effectively, accelerating the forest's restoration and fostering a knowledgeable community. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N5A2a2b",
+            "outcome": "Focusing on short-term projects delivered quick restoration results, maintaining volunteer enthusiasm. However, without long-term strategies, the forest's recovery relied heavily on sustained volunteer participation. **Success Score: 65%**"
+        },
+        {
+            "node_id": "N5A2a2c",
+            "outcome": "Integrating conservation into school curricula instilled environmental responsibility in students. This educational foundation ensured ongoing community support and proactive engagement in preserving Silverwood Forest. **Success Score: 90%**"
+        },
+        {
+            "node_id": "N6A2a1a",
+            "outcome": "Applying for additional government support secured long-term funding for the watering system. This financial stability ensured uninterrupted maintenance, fostering robust tree growth and ecosystem resilience. **Success Score: 85%**"
+        },
+        {
+            "node_id": "N6A2a1b",
+            "outcome": "Corporate sponsorship provided immediate funds but required fulfilling sponsor conditions. While the watering system was maintained, balancing corporate interests with ecological goals became a challenge. **Success Score: 70%**"
+        },
+        {
+            "node_id": "N6A2a1c",
+            "outcome": "Launching a crowdfunding campaign successfully raised funds from the community, ensuring the watering system's sustainability. This collective effort strengthened community bonds and commitment to forest restoration. **Success Score: 80%**"
+        },
+        {
+            "node_id": "N6A2a2a",
+            "outcome": "Educational programs kept students engaged in conservation, fostering a new generation of environmental stewards. This ongoing involvement ensured sustained volunteer support and enhanced the forest's restoration efforts. **Success Score: 88%**"
+        },
+        {
+            "node_id": "N6A2a2b",
+            "outcome": "Focusing on short-term projects maintained immediate interest and achieved quick restoration milestones. However, the lack of long-term planning left the forest vulnerable to future challenges without continued volunteer support. **Success Score: 60%**"
+        },
+        {
+            "node_id": "N6A2a2c",
+            "outcome": "Integrating conservation into school curricula ingrained environmental responsibility in students. This educational foundation ensured ongoing community support and proactive engagement in preserving Silverwood Forest. **Success Score: 90%**"
+        }
+    ]
+}
